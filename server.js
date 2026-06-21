@@ -8,10 +8,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// ✅ MongoDB Connection (तुम्हारा already use किया)
-mongoose.connect("mongodb+srv://ASHIS-MONDAL:amondal..123A@cluster0.mongodb.net/portfolioDB?retryWrites=true&w=majority")
-.then(() => console.log("✅ MongoDB Connected"))
-.catch(err => console.log("❌ DB Error:", err));
+//  MongoDB Connection 
+mongoose.connect("mongodb+srv://ASHIS-MONDAL:amondal.123AS@cluster0.mongodb.net/portfolioDB?retryWrites=true&w=majority")
+.then(() => console.log(" MongoDB Connected"))
+.catch(err => console.log(" DB Error:", err));
 
 // Schema
 const messageSchema = new mongoose.Schema({
@@ -32,13 +32,13 @@ app.post("/send", async (req, res) => {
     try {
         const data = new Message(req.body);
         await data.save();
-        res.json({ success: true, message: "Message Sent Successfully ✅" });
+        res.json({ success: true, message: "Message Sent Successfully " });
     } catch (error) {
-        res.json({ success: false, message: "Error ❌" });
+        res.json({ success: false, message: "Error " });
     }
 });
 
 // Server
 app.listen(5000, () => {
-    console.log("🚀 Server running on http://localhost:5000");
+    console.log(" Server running on http://localhost:5000");
 });
