@@ -11,7 +11,7 @@ form.addEventListener("submit", async (e) => {
     };
 
     try {
-        const res = await fetch("http://localhost:5000/send", {
+        const res = await fetch("https://ashis742132.onrender.com", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -25,6 +25,6 @@ form.addEventListener("submit", async (e) => {
         form.reset();
 
     } catch (error) {
-        alert("Server error ❌");
+        alert("Server error ");
     }
 });
