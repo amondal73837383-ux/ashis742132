@@ -8,9 +8,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-//  MongoDB Connection 
+//  MongoDB Connection (तुम्हारा already use किया)
 mongoose.connect("mongodb+srv://ASHIS-MONDAL:amondal.123AS@cluster0.mongodb.net/portfolioDB?retryWrites=true&w=majority")
-.then(() => console.log(" MongoDB Connected"))
+.then(() => console.log("MongoDB Connected"))
 .catch(err => console.log(" DB Error:", err));
 
 // Schema

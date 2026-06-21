@@ -25,6 +25,6 @@ form.addEventListener("submit", async (e) => {
         form.reset();
 
     } catch (error) {
-        alert("Server error ");
+        alert("Server error ❌");
     }
 });
