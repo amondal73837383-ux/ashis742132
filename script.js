@@ -11,7 +11,7 @@ form.addEventListener("submit", async (e) => {
     };
 
     try {
-        const res = await fetch("https://ashis742132.onrender.com", {
+        const res = await fetch("https://portfolio-backendashis.onrender.com/send", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
